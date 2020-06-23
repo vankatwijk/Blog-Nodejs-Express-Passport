@@ -3,7 +3,7 @@ const Article = require('./../models/article')
 const router = express.Router()
 
 router.get('/new', (req, res) => {
-    res.render('articles/new',{article: new Articles() })
+    res.render('articles/new',{article: new Article() })
 })
 
 router.get('/:id', async (req, res) => {
