@@ -8,3 +8,4 @@ mongo --eval 'db.runCommand({ connectionStatus: 1 })'
 used for finding the mango server
 
 npm i marked slugify
+npm i method-override (allows you to use delete easily)
