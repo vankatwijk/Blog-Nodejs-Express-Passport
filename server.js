@@ -9,6 +9,7 @@ mongoose.connect('mongodb://localhost/nodeblog',{
 
 app.set('view engine', 'ejs')
 app.use('/articles', articleRouter)
+app.use(express.urlencoded({extended:false}))
 
 app.get('/', (req, res) =>{
     const articles =[{
