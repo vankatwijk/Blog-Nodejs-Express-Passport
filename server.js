@@ -5,7 +5,7 @@ const articleRouter = require('./routes/articles')
 const app = express()
 
 mongoose.connect('mongodb://localhost/nodeblog',{
-    useNewUrlParser: true, useUnifiedTopology: true
+    useNewUrlParser: true, useUnifiedTopology: true, usecreateIndex:true
 });
 
 app.set('view engine', 'ejs')

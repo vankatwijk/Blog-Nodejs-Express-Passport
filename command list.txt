@@ -6,3 +6,5 @@ npm run devStart
 sudo systemctl status mongodb
 mongo --eval 'db.runCommand({ connectionStatus: 1 })'
 used for finding the mango server
+
+npm i marked slugify
