@@ -2,3 +2,7 @@ npm init -y
 npm i express mongoose ejs
 npm i --save-dev nodemon
 npm run devStart
+
+sudo systemctl status mongodb
+mongo --eval 'db.runCommand({ connectionStatus: 1 })'
+used for finding the mango server
