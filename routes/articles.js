@@ -6,6 +6,10 @@ router.get('/new', (req, res) => {
     res.render('articles/new')
 })
 
+router.get('/:id', (req, res) => {
+    res.render('articles/new',{article: new Articles() })
+})
+
 router.post('/', async (req, res) => {
     const article = new Articles({
         title : req.body.title,
@@ -16,7 +20,7 @@ router.post('/', async (req, res) => {
         article = await article.save()
         res.redirect(`/articles/${article.id}`)
     }catch(e){
-
+        res.render('articles/new',{article:article})
     }
 })
 
