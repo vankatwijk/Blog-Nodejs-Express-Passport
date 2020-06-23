@@ -14,7 +14,7 @@
         <a href="/" class="btn btn-secondary">All Articles</a>
         <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
 
-        <div><%= article.markdown %></div>
+        <div><%- article.sanitizedHtml %></div>
         
     </div>
 </body>

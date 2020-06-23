@@ -6,6 +6,11 @@ router.get('/new', (req, res) => {
     res.render('articles/new',{article: new Article() })
 })
 
+
+router.get('/edit/:id', (req, res) => {
+    res.render('articles/new',{article: new Article() })
+})
+
 router.get('/:slug', async (req, res) => {
     const article = await Article.findOne({slug: req.params.slug})
     if (article == null) res.redirect('/')
