@@ -8,8 +8,21 @@
     <title>Blog</title>
 </head>
 <body>
-    <div class="container">
-        <h1 class="mb-4">Blog Articles</h1>
+    <div class="container">  
+        <div class="row">
+            <div class="col">
+                <h1 class="mb-4">Blog Articles</h1>
+            </div>
+            <div class="col">
+              
+            </div>
+            <div class="col">
+                <a href="/Auth/login" class="btn btn-success">Login</a>
+                <a href="/Auth/register" class="btn btn-success">Register</a>
+            </div>
+        </div>
+
+        
         <a href="/articles/new" class="btn btn-success">New Articles</a>
 
         <% articles.forEach(article => { %>
