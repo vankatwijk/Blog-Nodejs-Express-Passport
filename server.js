@@ -2,11 +2,12 @@ const express = require('express')
 const mongoose = require('mongoose')
 const Article = require('./models/article')
 const articleRouter = require('./routes/articles')
+const userRouter = require('./routes/users')
 const methodOverride = require('method-override')
 const app = express()
 
 mongoose.connect('mongodb://localhost/nodeblog',{
-    useNewUrlParser: true, useUnifiedTopology: true, usecreateIndex:true
+    useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true
 });
 
 app.set('view engine', 'ejs')
@@ -20,5 +21,6 @@ app.get('/', async (req, res) =>{
     res.render('articles/index', {articles: articles})
 })
 app.use('/articles', articleRouter)
+app.use('/auth', userRouter)
 
 app.listen(5000)

@@ -62,7 +62,8 @@ npm run devStart
 
 ## Based on
 
-* **Web Dev Simplified** - [Youtube](https://www.youtube.com/watch?v=1NrHkjlWVhM)
+* **Web Dev Simplified** - [Youtube - blog](https://www.youtube.com/watch?v=1NrHkjlWVhM)
+* **Web Dev Simplified** - [Youtube - authentication](https://www.youtube.com/watch?v=-RCnNyD0L-s&list=WL&index=13&t=0s)
 
 ## License
 

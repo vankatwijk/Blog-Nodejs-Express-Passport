@@ -1,6 +1,6 @@
 npm init -y
 npm i express mongoose ejs
-npm i --save-dev nodemon
+npm i --save-dev nodemon dotenv
 npm run devStart
 
 sudo systemctl status mongodb
@@ -11,6 +11,11 @@ npm i marked slugify
 npm i method-override (allows you to use delete easily)
 
 npm i dompurify jsdom (used for checking the html inserted in a form for malishious code)
+
+
+ejs (templating engine for node/express)
+dotenv (allows the use of enviroment variables .env )
+
 
 -------------------------------------------------------------------------
 if you are like me i constantly forget to switch between my work git and personal, this command will help you switch the commits
