@@ -13,7 +13,7 @@ Remove Post
 Update Post
 Delete Post
 
-Login / register (not included, check repo node user manager )
+Login / register ( using passport-local )
 ```
 
 ## Getting Started

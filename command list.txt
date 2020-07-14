@@ -16,6 +16,11 @@ npm i dompurify jsdom (used for checking the html inserted in a form for malishi
 ejs (templating engine for node/express)
 dotenv (allows the use of enviroment variables .env )
 
+after blog is done and authentication task begin
+------------------------------------------------------------------------
+npm i bcrypt
+
+npm i passport passport-local express-session express-flash
 
 -------------------------------------------------------------------------
 if you are like me i constantly forget to switch between my work git and personal, this command will help you switch the commits

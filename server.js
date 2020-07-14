@@ -11,7 +11,7 @@ mongoose.connect('mongodb://localhost/nodeblog',{
 });
 
 app.set('view engine', 'ejs')
-app.use(express.urlencoded({extended:false}))
+app.use(express.urlencoded({extended:false})) //tells express we want to get data from form like req.body.email
 app.use(methodOverride('_method'))
 
 app.get('/', async (req, res) =>{
