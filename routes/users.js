@@ -2,9 +2,7 @@ const express = require('express')
 const router = express.Router()
 const bcrypt = require('bcrypt')
 const passport = require('passport')
-const flash = require('express-flash')
 const session = require('express-session')
-const methodOverride = require('method-override')
 
 const initializePassport = require('../passport-config')
 initializePassport(
@@ -15,15 +13,20 @@ initializePassport(
 
 const users = []
 
-router.get('/login', (req, res) => {
+router.get('/profile', checkAuthenticated, (req, res) => {
     res.render('Auth/login.ejs')
 })
 
-// router.post('/login', checkNotAuthenticated, passport.authenticate('local', {
-//     successRedirect: '/',
-//     failureRedirect: '/login',
-//     failureFlash: true
-// }))
+
+router.get('/login', checkNotAuthenticated, (req, res) => {
+    res.render('Auth/login.ejs')
+})
+
+router.post('/login', checkNotAuthenticated, passport.authenticate('local', {
+    successRedirect: '/',
+    failureRedirect: '/Auth/login',
+    failureFlash: true
+}))
 
 router.get('/register', (req, res) => {
     res.render('Auth/register.ejs')
@@ -38,15 +41,32 @@ router.post('/register', async (req, res) => {
         email: req.body.email,
         password: hashedPassword
         })
-        //res.redirect('Auth/login')
+        res.redirect('login')
     } catch {
-        //res.redirect('Auth/register')
+        res.redirect('register')
     }
 
-    console.log(users);
 })
 
+router.delete('/logout', (req, res) => {
+    req.logOut()
+    res.redirect('/')
+})
 
+function checkAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        return next()
+    }
+
+    res.redirect('/Auth/login')
+}
+
+function checkNotAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        return res.redirect('/')
+    }
+    next()
+}
 
 
 module.exports = router

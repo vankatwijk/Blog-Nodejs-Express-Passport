@@ -21,7 +21,9 @@
                 <a href="/" class="btn btn-success">Home</a>
             </div>
         </div>
-
+        <% if (messages.error) { %>
+            <%= messages.error %>
+          <% } %>
         <form action="login" method="POST">
             <div>
               <label for="email">Email</label>
