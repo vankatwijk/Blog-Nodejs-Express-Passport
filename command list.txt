@@ -35,3 +35,7 @@ then
     export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
 fi
 ' --tag-name-filter cat -- --branches --tags
+
+
+git config user.email hendrikus.hpvk@gmail.com
+git config user.name 'vankatwijk'
