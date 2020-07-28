@@ -33,7 +33,7 @@ After you clone this project, do the following:
 cd Blog-Nodejs-Express
 
 # run the app using node
-npm run devStart
+npm install
 
 ```
 
