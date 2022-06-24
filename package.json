@@ -24,7 +24,7 @@
     "express": "^4.17.1",
     "express-flash": "0.0.2",
     "express-session": "^1.17.1",
-    "jsdom": "^16.2.2",
+    "jsdom": "^16.5.0",
     "marked": "^1.1.0",
     "method-override": "^3.0.0",
     "mongoose": "^5.9.20",
